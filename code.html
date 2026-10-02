@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEQR</title>
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    <div class="contenus">
+        <h1>QR Code Generator</h1>
+        <p class="description">Transformer facilement un text ou un lien en QR CODE</p>
+        <div class="form">
+            <input type="text" id="text" placeholder="Entre un texte ou un lien...">
+        </div>
+
+        <div id="qr-contenus">
+            <p>Votre QR Code apparaitra ici</p>
+        </div>
+        <button id="download" onclick="downloadQR()" style="display: none;">
+            Télécharger
+        </button>
+    </div>
+
+    <script src="code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</body>
+</html>
