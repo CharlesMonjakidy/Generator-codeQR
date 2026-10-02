@@ -16,6 +16,9 @@ function generateQR() {
         width:200,
         height:200,
     });
+
+    //afficher le bouton télecharger une fois le qr code creer
+    downloadButton.style.display = "block";
 }
 
 function downloadQR(){
