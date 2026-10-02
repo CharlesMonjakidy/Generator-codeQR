@@ -5,11 +5,13 @@ function generateQR() {
     const downloadButton = document.getElementById("download");
 
     if(text.trim()=== ""){
-        alert("Veuillez entrer un text ou un lien.")
+        alert("Veuillez entrer un text ou un lien.");
+
+        return;
     }
 
     contenus.innerHTML = "";
-    qrCode = new qrCode(contenus, {
+    qrCode = new QRCode(contenus, {
         text: text,
         width:200,
         height:200,
@@ -19,7 +21,7 @@ function generateQR() {
 function downloadQR(){
     const qrimage = document.querySelector("#qr-contenus img");
 
-    if(qrimage){
+    if(!qrimage){
         return;
     }
 
